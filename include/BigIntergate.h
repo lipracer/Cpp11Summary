@@ -14,10 +14,15 @@ public:
     BigIntergate(string str) : m_number_str(str) { }
     BigIntergate operator+(BigIntergate& other);
     BigIntergate operator*(BigIntergate& other);
-    friend ostream& operator<<(ostream& cout_, BigIntergate& big_int)
+    friend ostream& operator<<(ostream& outs, BigIntergate& big_int)
     {
-        cout << big_int.m_number_str;
-        return cout;
+        outs << big_int.m_number_str;
+        return outs;
+    }
+    friend ostream& operator<<(ostream& outs, BigIntergate&& big_int)
+    {
+        outs << big_int.m_number_str;
+        return outs;
     }
 private:
     std::string m_number_str;

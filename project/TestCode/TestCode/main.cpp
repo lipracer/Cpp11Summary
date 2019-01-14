@@ -28,8 +28,6 @@ int main(int argc, char** argvs)
     }
     BigIntergate num1("123456789");
     BigIntergate num2("123456789");
-    
-    
-    cout << num1 + num2 << endl;
+    num1+num2;
     return 0;
 }
