@@ -1,6 +1,7 @@
 //demo for cpp11
-#include "include/LLArray.hpp"
 #include <iostream>
+#include "include/LLArray.hpp"
+#include "include/BigIntergate.h"
 
 using namespace std;
 
@@ -25,6 +26,8 @@ int main(int argc, char** argvs)
             cout << endl;
         }
     }
-    
+    BigIntergate num1("123456789");
+    BigIntergate num2("123456789");
+    num1+num2;
     return 0;
 }
