@@ -33,6 +33,10 @@ public:
     {
         return __aSize[0];
     }
+	void Release() 
+	{
+		delete __aSize;
+	}
 private:
     TYPE* __data;
     int *__aSize;

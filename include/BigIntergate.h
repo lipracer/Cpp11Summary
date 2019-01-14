@@ -12,8 +12,8 @@ class BigIntergate
 public:
     //template<typename T>
     BigIntergate(string str) : m_number_str(str) { }
-    BigIntergate operator+(BigIntergate& other);
-    BigIntergate operator*(BigIntergate& other);
+    BigIntergate operator+(const BigIntergate& other);
+    BigIntergate operator*(const BigIntergate& other);
     friend ostream& operator<<(ostream& outs, BigIntergate& big_int)
     {
         outs << big_int.m_number_str;
