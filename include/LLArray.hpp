@@ -62,5 +62,49 @@ private:
     int *__aSize;
 };
 
+//template <typename TYPE, int LastC, int ...argvs>
+//class LLArray
+//{
+//public:
+//    LLArray(TYPE *data) : __data(data)
+//    {
+//    }
+//    LLArray<TYPE, argvs...> operator[](int index)
+//    {
+//        int offset = 1;
+//        int tmp[] = {argvs...};
+//        for (int i = 0; i < sizeof(tmp)/sizeof(int); i++)
+//        {
+//            offset *= tmp[i];
+//        }
+//        return LLArray<TYPE, argvs...>(__data + index * offset);
+//    }
+//    int size()
+//    {
+//        return LastC;
+//    }
+//private:
+//    TYPE* __data;
+//};
+//
+//template <typename TYPE, int LastC>
+//class LLArray<TYPE, LastC>
+//{
+//public:
+//    LLArray(TYPE *data) : __data(data)
+//    {
+//    }
+//    TYPE operator[](int index)
+//    {
+//        return __data[index];
+//    }
+//    int size()
+//    {
+//        return LastC;
+//    }
+//private:
+//    TYPE* __data;
+//};
+
 
 #endif // LLARRAY_H_

@@ -86,7 +86,7 @@ BigIntergate BigIntergate::operator*(const BigIntergate& other)
 {
 	assert(this->m_number_str.size() && other.m_number_str.size());
 	BigIntergate ret("0");
-	int size = other.m_number_str.size();
+	int size = (int)other.m_number_str.size();
 	for (int i = size-1; i >= 0; i--)
 	{
 		string result = MultStrChar(this->m_number_str, other.m_number_str[i], size-1-i);
