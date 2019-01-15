@@ -9,17 +9,17 @@ template <typename TYPE, int DISM>
 class LLArray
 {
 public:
-    LLArray(TYPE *data, initializer_list<int> list) : __data(data)
+    template<typename ...ARGVS>
+    LLArray(TYPE *data, ARGVS ...argvs) : __data(data)
     {
         __aSize = new int[DISM];
-        for (int i = 0; i < DISM; i++)
-        {
-            __aSize[i] = *(list.begin() + i);
-        }
+        int tmp[] = {argvs...};
+        memcpy(__aSize, tmp, DISM*sizeof(int));
     }
     LLArray(TYPE *data, int *size) : __data(data), __aSize(size)
     {
     }
+public:
     LLArray<TYPE, DISM - 1> operator[](int index)
     {
         int offset = 1;

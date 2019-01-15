@@ -13,7 +13,7 @@ int main(int argc, char** argvs)
         nArray[i] = i;
     }
     
-    LLArray<int, 3> array(nArray, {2, 3, 4});
+    LLArray<int, 3> array(nArray, 2, 3, 4);
     
     for (int i=0; i<array.size(); ++i)
     {
@@ -26,11 +26,11 @@ int main(int argc, char** argvs)
             cout << endl;
         }
     }
-    BigIntergate num1("123456789987654321");
-    BigIntergate num2("123456789987654321");
+    //BigIntergate num1("123456789987654321");
+    //BigIntergate num2("123456789987654321");
     
     
-    cout << num1 * num2 << endl;
+//    cout << num1 * num2 << endl;
 	system("pause");
     return 0;
 }
