@@ -23,7 +23,7 @@ public:
     LLArray<TYPE, DISM - 1> operator[](int index)
     {
         int offset = 1;
-        for (int i = 0; i < DISM-1; i++)
+        for (int i = 1; i < DISM; i++)
         {
             offset *= __aSize[i];
         }
