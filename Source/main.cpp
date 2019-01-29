@@ -31,11 +31,22 @@ int main(int argc, char** argvs)
         }
         cout << endl << endl << endl;
     }
-    //BigIntergate num1("123456789987654321");
-    //BigIntergate num2("123456789987654321");
+    BigIntergate num1("123456789987654321");
+    BigIntergate num2("123456789987654321");
     
     
-//    cout << num1 * num2 << endl;
+    cout << num1 * num2 << endl;
+    
+    vector<int> n1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    vector<int> n2 = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+    
+    auto result = Mul2BigIntergate<int>(n1, n2);
+    for (auto r : result)
+    {
+        cout << r;
+    }
+    cout << endl;
+    
 	system("pause");
     return 0;
 }
