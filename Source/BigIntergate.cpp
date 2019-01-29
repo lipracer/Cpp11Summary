@@ -95,3 +95,15 @@ BigIntergate BigIntergate::operator*(const BigIntergate& other)
 	}
     return ret;
 }
+
+ostream& operator<<(ostream& outs, BigIntergate& big_int)
+{
+    outs << big_int.m_number_str;
+    return outs;
+}
+
+ostream& operator<<(ostream& outs, BigIntergate&& big_int)
+{
+    outs << big_int.m_number_str;
+    return outs;
+}
